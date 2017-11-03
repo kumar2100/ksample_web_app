@@ -2,15 +2,17 @@ pipeline {
     agent any 
     
    environment {
-    PATH = 'D:\\apache-maven-3.3.9\\bin;C:\\Windows\\System32:$PATH'
        
   }
 
     stages {
         stage('Build') { 
             steps { 
-                echo "PATH is: $PATH"
-                bat 'mvn clean package' 
+                withEnv(['PATH=%PATH%;C:\\Windows\\System32;D:\\apache-maven-3.3.9\\bin']) {
+                    // some block
+                    bat 'mvn clean package'     
+                }
+               
             }
         }
         stage('Test'){
