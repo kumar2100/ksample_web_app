@@ -1,9 +1,14 @@
 pipeline {
     agent any 
+    
+   environment {
+    PATH = "D:\apache-maven-3.3.9\bin:$PATH"
+  }
 
     stages {
         stage('Build') { 
             steps { 
+                echo "PATH is: $PATH"
                 bat 'mvn clean package' 
             }
         }
