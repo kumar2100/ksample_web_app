@@ -11,7 +11,7 @@
 <h3> Welcome to Learn</h3>
 <br>
 <h4>Good Quotes</h4>
-<img src="./images/one_small_positive.jpg" alt="One Small Positive Change" />
+<img src="./images/kind_words.jpg" alt="One Small Positive Change" />
 <br>
 
 <h4><a href="index2.jsp">Login to Application</a></h4>
